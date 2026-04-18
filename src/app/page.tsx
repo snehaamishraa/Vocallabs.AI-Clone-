@@ -2,7 +2,6 @@ import { Hero } from "@/components/landing/Hero";
 import { SocialProof } from "@/components/landing/SocialProof";
 import { BentoFeatures } from "@/components/landing/BentoFeatures";
 import { PillarsSection } from "@/components/landing/PillarsSection";
-import { Pricing } from "@/components/landing/Pricing";
 import { Testimonials } from "@/components/landing/Testimonials";
 import { Footer } from "@/components/landing/Footer";
 import { CookieBanner } from "@/components/landing/CookieBanner";
@@ -14,7 +13,6 @@ export default function Home() {
       <SocialProof />
       <BentoFeatures />
       <PillarsSection />
-      <Pricing />
       <Testimonials />
       <Footer />
       <CookieBanner />
