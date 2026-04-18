@@ -6,21 +6,21 @@ import { reveal, staggerContainer } from "@/lib/motion";
 import { cn } from "@/lib/cn";
 
 const items = [
-  { title: "vocalassist.ai", href: "https://vocalassist.ai/" },
-  { title: "app.vocalassist.ai", href: "https://app.vocalassist.ai/" },
-  { title: "App.vocalassist", href: "https://app.vocalassist.ai/" },
-  { title: "Vocalassist", href: "https://vocalassist.ai/" },
-  { title: "App.vocallabs", href: "https://app.vocallabs.ai/login" },
-  { title: "App.hiringg", href: "https://app.hiringg.ai/" },
-  { title: "Hiringg", href: "https://hiringg.ai/" },
-  { title: "Vocallabs Identity", href: "https://vocallabs.ai/products/vocallabs-identity" },
-  { title: "VocalStack Voice", href: "https://vocallabs.ai/products/vocalstack-voice" },
-  { title: "Vocalassist AI", href: "https://vocalassist.ai/" },
-  { title: "VocalLabs Dashboard", href: "https://app.vocallabs.ai/login" },
-  { title: "Hiringg Platform", href: "https://app.hiringg.ai/" },
-  { title: "VocalStack Platform", href: "https://vocalassist.ai/" },
-  { title: "VocalLabs App", href: "https://app.vocallabs.ai/login" },
-  { title: "Hiringg Solution", href: "https://app.hiringg.ai/" },
+  { title: "vocalassist.ai", href: "#" },
+  { title: "app.vocalassist.ai", href: "#" },
+  { title: "App.vocalassist", href: "#" },
+  { title: "Vocalassist", href: "#" },
+  { title: "App.vocallabs", href: "#" },
+  { title: "App.hiringg", href: "#" },
+  { title: "Hiringg", href: "#" },
+  { title: "Vocallabs Identity", href: "#" },
+  { title: "VocalStack Voice", href: "#" },
+  { title: "Vocalassist AI", href: "#" },
+  { title: "VocalLabs Dashboard", href: "#" },
+  { title: "Hiringg Platform", href: "#" },
+  { title: "VocalStack Platform", href: "#" },
+  { title: "VocalLabs App", href: "#" },
+  { title: "Hiringg Solution", href: "#" },
 ];
 
 export function Pricing() {

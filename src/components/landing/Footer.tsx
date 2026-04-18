@@ -46,11 +46,11 @@ function IconYouTube(props: SVGProps<SVGSVGElement>) {
 }
 
 const social = [
-  { href: "https://www.linkedin.com/company/vocallabsai/", label: "LinkedIn", icon: IconLinkedIn },
-  { href: "https://www.facebook.com/profile.php?id=61572573494501", label: "Facebook", icon: IconFacebook },
-  { href: "https://www.instagram.com/vocallabsai/", label: "Instagram", icon: IconInstagram },
-  { href: "https://www.x.com/vocallabsai", label: "X", icon: IconX },
-  { href: "https://www.youtube.com/@vocallabsai", label: "YouTube", icon: IconYouTube },
+  { href: "#", label: "LinkedIn", icon: IconLinkedIn },
+  { href: "#", label: "Facebook", icon: IconFacebook },
+  { href: "#", label: "Instagram", icon: IconInstagram },
+  { href: "#", label: "X", icon: IconX },
+  { href: "#", label: "YouTube", icon: IconYouTube },
 ];
 
 export function Footer() {
@@ -71,9 +71,7 @@ export function Footer() {
             <motion.a
               whileHover={{ y: -1, scale: 1.01 }}
               whileTap={{ scale: 0.99 }}
-              href="https://www.vocallabs.ai/contact"
-              target="_blank"
-              rel="noreferrer"
+              href="#"
               className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-violet-500 via-violet-600 to-fuchsia-600 px-5 py-3 text-sm font-semibold text-white shadow-[0_0_0_1px_rgba(255,255,255,0.12),0_14px_40px_-12px_rgba(168,85,247,0.8)]"
             >
               Schedule Your Free Demo
@@ -96,33 +94,33 @@ export function Footer() {
             <div>
               <div className="text-sm font-semibold tracking-wide text-white/92 font-[var(--font-display)]">Company</div>
               <div className="mt-3 space-y-2 text-sm text-white/55">
-                <a className="block hover:text-white/80" href="https://www.vocallabs.ai/about" target="_blank" rel="noreferrer">About Us</a>
-                <a className="block hover:text-white/80" href="https://www.vocallabs.ai/contact" target="_blank" rel="noreferrer">Contact Us</a>
-                <a className="block hover:text-white/80" href="https://www.vocallabs.ai/pricing-policy" target="_blank" rel="noreferrer">Pricing Policy</a>
-                <a className="block hover:text-white/80" href="https://vocallabs.ai/blogs" target="_blank" rel="noreferrer">Blogs</a>
-                <a className="block hover:text-white/80" href="https://app.hiringg.ai/vocallabs" target="_blank" rel="noreferrer">Careers</a>
+                <a className="block hover:text-white/80" href="#">About Us</a>
+                <a className="block hover:text-white/80" href="#">Contact Us</a>
+                <a className="block hover:text-white/80" href="#">Pricing Policy</a>
+                <a className="block hover:text-white/80" href="#">Blogs</a>
+                <a className="block hover:text-white/80" href="#">Careers</a>
               </div>
             </div>
 
             <div>
               <div className="text-sm font-semibold tracking-wide text-white/92 font-[var(--font-display)]">Contact</div>
               <div className="mt-3 space-y-2 text-sm text-white/55">
-                <a className="block hover:text-white/80" href="https://www.vocallabs.ai/contact" target="_blank" rel="noreferrer">Schedule Demo</a>
+                <a className="block hover:text-white/80" href="#">Schedule Demo</a>
               </div>
               <div className="mt-5 text-sm font-semibold tracking-wide text-white/92 font-[var(--font-display)]">Open Source</div>
               <div className="mt-3 text-sm text-white/55">
-                <a className="block hover:text-white/80" href="https://www.vocallabs.ai/vocalflow" target="_blank" rel="noreferrer">VocalFlow</a>
+                <a className="block hover:text-white/80" href="#">VocalFlow</a>
               </div>
             </div>
 
             <div>
               <div className="text-sm font-semibold tracking-wide text-white/92 font-[var(--font-display)]">Legal</div>
               <div className="mt-3 space-y-2 text-sm text-white/55">
-                <a className="block hover:text-white/80" href="https://www.vocallabs.ai/privacy-policy" target="_blank" rel="noreferrer">Privacy Policy</a>
-                <a className="block hover:text-white/80" href="https://www.vocallabs.ai/terms-and-conditions" target="_blank" rel="noreferrer">Terms & Conditions</a>
-                <a className="block hover:text-white/80" href="https://www.vocallabs.ai/refund-policy" target="_blank" rel="noreferrer">Refund Policy</a>
-                <a className="block hover:text-white/80" href="https://www.vocallabs.ai/dpa" target="_blank" rel="noreferrer">Data Protection Addendum</a>
-                <a className="block hover:text-white/80" href="https://vocallabsai.betteruptime.com/" target="_blank" rel="noreferrer">Uptime Status</a>
+                <a className="block hover:text-white/80" href="#">Privacy Policy</a>
+                <a className="block hover:text-white/80" href="#">Terms & Conditions</a>
+                <a className="block hover:text-white/80" href="#">Refund Policy</a>
+                <a className="block hover:text-white/80" href="#">Data Protection Addendum</a>
+                <a className="block hover:text-white/80" href="#">Uptime Status</a>
               </div>
             </div>
           </div>
