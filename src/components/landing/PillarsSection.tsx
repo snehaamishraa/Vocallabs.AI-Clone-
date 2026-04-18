@@ -71,9 +71,6 @@ export function PillarsSection() {
           >
             Reliable. Scalable. Secure.
           </motion.h2>
-          <motion.p variants={reveal} className="mx-auto mt-4 max-w-2xl text-[1.02rem] leading-[1.8] tracking-[0.01em] text-white/70">
-            The core product blocks from the live site, turned into a denser visual grid.
-          </motion.p>
         </motion.div>
 
         <motion.div
