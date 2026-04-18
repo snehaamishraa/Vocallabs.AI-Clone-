@@ -35,7 +35,7 @@ export function BentoFeatures() {
               <div className="rounded-[1.7rem] border border-white/20 bg-[#0a0a12] p-2 sm:p-3">
                 <div className="relative aspect-[16/9] overflow-hidden rounded-[1.3rem] border border-white/10 bg-black">
                   <iframe
-                    src="https://www.youtube.com/embed/XeIrrErzEbw?rel=0&modestbranding=1"
+                    src="https://www.youtube.com/embed/XeIrrErzEbw?autoplay=1&mute=1&loop=1&playlist=XeIrrErzEbw&playsinline=1&rel=0&modestbranding=1"
                     title="VocalLabs Demo Video"
                     className="h-full w-full"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
