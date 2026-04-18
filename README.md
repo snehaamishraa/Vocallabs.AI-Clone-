@@ -24,15 +24,6 @@ Recommended screenshot set:
 4. Footer + cookie banner
 5. Full homepage (mobile)
 
-Suggested local paths for storing screenshots:
-
-- `docs/screenshots/home-desktop.png`
-- `docs/screenshots/hero-desktop.png`
-- `docs/screenshots/mid-sections-desktop.png`
-- `docs/screenshots/footer-cookie-desktop.png`
-- `docs/screenshots/home-mobile.png`
-
-If you add these files, link them here so README stays visual and easy for reviewers.
 
 ## Screens and Sections
 
