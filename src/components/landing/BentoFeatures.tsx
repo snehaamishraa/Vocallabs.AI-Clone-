@@ -30,6 +30,23 @@ export function BentoFeatures() {
             Any protocol, one API, millions of concurrent calls, and low-latency model hosting—organized as a crisp bento grid.
           </motion.p>
 
+          <motion.div variants={reveal} className="mt-8">
+            <div className="mx-auto w-full max-w-5xl rounded-[2rem] border border-violet-300/35 bg-gradient-to-b from-[#261764] via-[#201057] to-[#140b3d] p-1 shadow-[0_20px_60px_-30px_rgba(124,58,237,0.65)]">
+              <div className="rounded-[1.7rem] border border-white/20 bg-[#0a0a12] p-2 sm:p-3">
+                <div className="relative aspect-[16/9] overflow-hidden rounded-[1.3rem] border border-white/10 bg-black">
+                  <iframe
+                    src="https://www.youtube.com/embed/XeIrrErzEbw?rel=0&modestbranding=1"
+                    title="VocalLabs Demo Video"
+                    className="h-full w-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
           <div className="mt-10 grid grid-cols-1 gap-4 lg:grid-cols-12">
             <motion.article
               variants={reveal}
