@@ -12,7 +12,7 @@ export function CursorGlow() {
   const glow = useMotionTemplate`radial-gradient(520px circle at ${sx}px ${sy}px, rgba(124,58,237,0.22), rgba(59,130,246,0.10) 35%, transparent 60%)`;
 
   useEffect(() => {
-    const mq = window.matchMedia("(pointer:fine)");
+    const mq = window.matchMedia("(pointer:fine) and (min-width: 1024px) and (prefers-reduced-motion: no-preference)");
     const apply = () => setEnabled(mq.matches);
     apply();
     mq.addEventListener("change", apply);

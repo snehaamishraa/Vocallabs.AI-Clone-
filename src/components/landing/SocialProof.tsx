@@ -58,6 +58,8 @@ export function SocialProof() {
               <img
                 src={`https://cdn.vocallabs.ai${src}`}
                 alt={`Partner logo ${index + 1}`}
+                loading="lazy"
+                decoding="async"
                 className="h-7 w-full object-contain opacity-75 grayscale saturate-0 transition duration-300 hover:opacity-100"
               />
             </div>

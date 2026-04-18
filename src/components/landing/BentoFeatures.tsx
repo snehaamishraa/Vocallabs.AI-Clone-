@@ -20,13 +20,16 @@ export function BentoFeatures() {
           <motion.h2
             variants={reveal}
             className={cn(
-              "max-w-3xl text-3xl sm:text-4xl font-semibold tracking-tight text-white",
+              "max-w-4xl text-balance text-[2.2rem] font-semibold leading-[0.98] tracking-[-0.02em] text-white sm:text-[3.15rem] lg:text-[4.35rem]",
               "font-[var(--font-display)]"
             )}
           >
-            Voice AI infrastructure built to scale.
+            <span className="text-white/95">Voice AI infrastructure</span>
+            <span className="mt-1 block bg-gradient-to-r from-white via-violet-200 to-fuchsia-300 bg-clip-text font-bold text-transparent drop-shadow-[0_10px_30px_rgba(168,85,247,0.35)] sm:mt-2">
+              built to scale.
+            </span>
           </motion.h2>
-          <motion.p variants={reveal} className="mt-3 max-w-2xl text-white/65 leading-relaxed">
+          <motion.p variants={reveal} className="mt-4 max-w-2xl text-[1.02rem] leading-[1.8] tracking-[0.01em] text-white/72">
             Any protocol, one API, millions of concurrent calls, and low-latency model hosting—organized as a crisp bento grid.
           </motion.p>
 
@@ -38,6 +41,7 @@ export function BentoFeatures() {
                     src="https://www.youtube.com/embed/XeIrrErzEbw?autoplay=1&mute=1&loop=1&playlist=XeIrrErzEbw&playsinline=1&rel=0&modestbranding=1"
                     title="VocalLabs Demo Video"
                     className="h-full w-full"
+                    loading="lazy"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerPolicy="strict-origin-when-cross-origin"
                     allowFullScreen
@@ -56,11 +60,11 @@ export function BentoFeatures() {
               <div className="relative flex items-start justify-between gap-3">
                 <div>
                   <div className="text-xs font-semibold uppercase tracking-wider text-white/45">Telephony</div>
-                  <h3 className="mt-2 text-lg font-semibold text-white/90">Any Protocol. One API.</h3>
+                  <h3 className="mt-2 text-lg font-semibold tracking-tight text-white/92 font-[var(--font-display)]">Any Protocol. One API.</h3>
                 </div>
                 <Workflow className="h-5 w-5 text-violet-300/90" />
               </div>
-              <p className="relative mt-3 text-sm leading-relaxed text-white/60">
+              <p className="relative mt-3 text-sm leading-[1.75] text-white/67">
                 SIP, WebRTC, and PSTN unified under a single developer-friendly interface.
               </p>
             </motion.article>
@@ -73,11 +77,11 @@ export function BentoFeatures() {
               <div className="relative flex items-start justify-between gap-3">
                 <div>
                   <div className="text-xs font-semibold uppercase tracking-wider text-white/45">Reliability</div>
-                  <h3 className="mt-2 text-lg font-semibold text-white/90">99.9% Uptime. Always.</h3>
+                  <h3 className="mt-2 text-lg font-semibold tracking-tight text-white/92 font-[var(--font-display)]">99.9% Uptime. Always.</h3>
                 </div>
                 <ShieldCheck className="h-5 w-5 text-cyan-300/90" />
               </div>
-              <p className="relative mt-3 text-sm leading-relaxed text-white/60">
+              <p className="relative mt-3 text-sm leading-[1.75] text-white/67">
                 Global redundancy and automatic failover, built into every call.
               </p>
             </motion.article>
@@ -90,11 +94,11 @@ export function BentoFeatures() {
               <div className="relative flex items-start justify-between gap-3">
                 <div>
                   <div className="text-xs font-semibold uppercase tracking-wider text-white/45">Scale</div>
-                  <h3 className="mt-2 text-lg font-semibold text-white/90">Millions of Concurrent Calls</h3>
+                  <h3 className="mt-2 text-lg font-semibold tracking-tight text-white/92 font-[var(--font-display)]">Millions of Concurrent Calls</h3>
                 </div>
                 <Gauge className="h-5 w-5 text-fuchsia-300/85" />
               </div>
-              <p className="relative mt-3 text-sm leading-relaxed text-white/60">
+              <p className="relative mt-3 text-sm leading-[1.75] text-white/67">
                 Horizontal auto-scaling from a single call to millions without manual provisioning.
               </p>
             </motion.article>
@@ -107,8 +111,8 @@ export function BentoFeatures() {
               <div className="relative grid gap-6 lg:grid-cols-2 lg:items-center">
                 <div>
                   <div className="text-xs font-semibold uppercase tracking-wider text-white/45">AI Stack</div>
-                  <h3 className="mt-2 text-xl font-semibold text-white/90">Host Your AI Models</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-white/60">
+                  <h3 className="mt-2 text-xl font-semibold tracking-tight text-white/92 font-[var(--font-display)]">Host Your AI Models</h3>
+                  <p className="mt-3 text-sm leading-[1.75] text-white/67">
                     Co-locate your LLM, TTS, and ASR alongside telephony for the lowest possible latency.
                   </p>
                 </div>
@@ -138,8 +142,8 @@ export function BentoFeatures() {
               <div className="relative flex flex-col gap-5 lg:flex-row lg:items-start">
                 <div className="flex-1">
                   <div className="text-xs font-semibold uppercase tracking-wider text-white/45">Dev-First</div>
-                  <h3 className="mt-2 text-lg font-semibold text-white/90">Ship in Hours, Not Months</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-white/60">
+                  <h3 className="mt-2 text-lg font-semibold tracking-tight text-white/92 font-[var(--font-display)]">Ship in Hours, Not Months</h3>
+                  <p className="mt-3 text-sm leading-[1.75] text-white/67">
                     Clean REST APIs, typed SDKs, and webhooks—your first call is minutes away.
                   </p>
                 </div>
@@ -157,8 +161,8 @@ export function BentoFeatures() {
               <div className="relative grid gap-6 lg:grid-cols-12 lg:items-center">
                 <div className="lg:col-span-7">
                   <div className="text-xs font-semibold uppercase tracking-wider text-white/45">Latency</div>
-                  <h3 className="mt-2 text-2xl font-semibold text-white/90">Sub-300ms. Every Call.</h3>
-                  <p className="mt-3 max-w-xl text-sm leading-relaxed text-white/60">
+                  <h3 className="mt-2 text-2xl font-semibold tracking-tight text-white/92 font-[var(--font-display)]">Sub-300ms. Every Call.</h3>
+                  <p className="mt-3 max-w-xl text-sm leading-[1.75] text-white/67">
                     Real-time barge-in, live context updates, and studio-grade audio at any scale.
                   </p>
                 </div>

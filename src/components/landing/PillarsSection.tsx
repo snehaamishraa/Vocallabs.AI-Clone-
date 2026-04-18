@@ -48,7 +48,7 @@ function Visual({ image, title }: { image: string; title: string }) {
   return (
     <div className="relative mx-auto h-36 w-full max-w-[220px] overflow-hidden rounded-2xl border border-white/10 bg-black/30">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(124,58,237,0.22),transparent_55%)]" />
-      <img src={`https://cdn.vocallabs.ai${image}`} alt={title} className="absolute inset-0 h-full w-full object-cover opacity-90" />
+      <img src={`https://cdn.vocallabs.ai${image}`} alt={title} loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-cover opacity-90" />
     </div>
   );
 }
@@ -67,11 +67,11 @@ export function PillarsSection() {
         >
           <motion.h2
             variants={reveal}
-            className={cn("text-3xl sm:text-5xl font-semibold tracking-tight text-white font-[var(--font-display)]")}
+            className={cn("text-3xl sm:text-5xl font-semibold tracking-[-0.02em] text-white font-[var(--font-display)]")}
           >
             Reliable. Scalable. Secure.
           </motion.h2>
-          <motion.p variants={reveal} className="mx-auto mt-3 max-w-2xl text-white/60">
+          <motion.p variants={reveal} className="mx-auto mt-4 max-w-2xl text-[1.02rem] leading-[1.8] tracking-[0.01em] text-white/70">
             The core product blocks from the live site, turned into a denser visual grid.
           </motion.p>
         </motion.div>
@@ -94,8 +94,8 @@ export function PillarsSection() {
               <div className="pointer-events-none absolute inset-0 opacity-0 transition group-hover:opacity-100 bg-[radial-gradient(circle_at_50%_0%,rgba(124,58,237,0.18),transparent_55%)]" />
               <div className="relative">
                 <div className="text-[11px] font-semibold uppercase tracking-wider text-white/45">{p.label}</div>
-                <h3 className="mt-2 text-base font-semibold text-white/90 leading-snug">{p.title}</h3>
-                <p className="mt-2 text-sm text-white/55 leading-relaxed">{p.body}</p>
+                <h3 className="mt-2 text-base font-semibold tracking-tight text-white/92 leading-snug font-[var(--font-display)]">{p.title}</h3>
+                <p className="mt-2 text-sm text-white/65 leading-[1.72]">{p.body}</p>
                 <div className="mt-5"><Visual image={p.image} title={p.title} /></div>
               </div>
             </motion.article>

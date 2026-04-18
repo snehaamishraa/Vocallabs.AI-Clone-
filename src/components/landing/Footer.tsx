@@ -63,7 +63,7 @@ export function Footer() {
               <div className="text-3xl sm:text-4xl font-semibold tracking-tight text-white font-[var(--font-display)]">
                 Ready to transform your business?
               </div>
-              <p className="mt-3 text-white/65 leading-relaxed">
+              <p className="mt-3 text-[1.02rem] leading-[1.8] tracking-[0.01em] text-white/72">
                 Transforming businesses with intelligent AI voice agents.
               </p>
             </div>
@@ -88,13 +88,13 @@ export function Footer() {
                 </span>
                 <span className="font-semibold tracking-tight text-white/90 font-[var(--font-display)]">VocalLabs</span>
               </div>
-              <p className="mt-3 text-sm text-white/55 leading-relaxed">
+              <p className="mt-3 text-sm leading-[1.75] text-white/64">
                 Empower your business with intelligent, real-time voice agents that understand, converse, and act.
               </p>
             </div>
 
             <div>
-              <div className="text-sm font-semibold text-white/90">Company</div>
+              <div className="text-sm font-semibold tracking-wide text-white/92 font-[var(--font-display)]">Company</div>
               <div className="mt-3 space-y-2 text-sm text-white/55">
                 <a className="block hover:text-white/80" href="https://www.vocallabs.ai/about" target="_blank" rel="noreferrer">About Us</a>
                 <a className="block hover:text-white/80" href="https://www.vocallabs.ai/contact" target="_blank" rel="noreferrer">Contact Us</a>
@@ -105,18 +105,18 @@ export function Footer() {
             </div>
 
             <div>
-              <div className="text-sm font-semibold text-white/90">Contact</div>
+              <div className="text-sm font-semibold tracking-wide text-white/92 font-[var(--font-display)]">Contact</div>
               <div className="mt-3 space-y-2 text-sm text-white/55">
                 <a className="block hover:text-white/80" href="https://www.vocallabs.ai/contact" target="_blank" rel="noreferrer">Schedule Demo</a>
               </div>
-              <div className="mt-5 text-sm font-semibold text-white/90">Open Source</div>
+              <div className="mt-5 text-sm font-semibold tracking-wide text-white/92 font-[var(--font-display)]">Open Source</div>
               <div className="mt-3 text-sm text-white/55">
                 <a className="block hover:text-white/80" href="https://www.vocallabs.ai/vocalflow" target="_blank" rel="noreferrer">VocalFlow</a>
               </div>
             </div>
 
             <div>
-              <div className="text-sm font-semibold text-white/90">Legal</div>
+              <div className="text-sm font-semibold tracking-wide text-white/92 font-[var(--font-display)]">Legal</div>
               <div className="mt-3 space-y-2 text-sm text-white/55">
                 <a className="block hover:text-white/80" href="https://www.vocallabs.ai/privacy-policy" target="_blank" rel="noreferrer">Privacy Policy</a>
                 <a className="block hover:text-white/80" href="https://www.vocallabs.ai/terms-and-conditions" target="_blank" rel="noreferrer">Terms & Conditions</a>

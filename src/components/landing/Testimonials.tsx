@@ -29,13 +29,13 @@ export function Testimonials() {
           <motion.h2
             variants={reveal}
             className={cn(
-              "text-3xl sm:text-4xl font-semibold tracking-tight text-white",
+              "text-3xl sm:text-4xl font-semibold tracking-[-0.02em] text-white",
               "font-[var(--font-display)]"
             )}
           >
             Enterprise & Security
           </motion.h2>
-          <motion.p variants={reveal} className="mt-3 max-w-2xl text-white/65 leading-relaxed">
+          <motion.p variants={reveal} className="mt-4 max-w-2xl text-[1.02rem] leading-[1.8] tracking-[0.01em] text-white/72">
             Your data security is our top priority. We maintain the highest standards of compliance and security certifications.
           </motion.p>
 
@@ -47,15 +47,15 @@ export function Testimonials() {
                 className="rounded-2xl border border-white/10 bg-white/[0.05] p-4 backdrop-blur-2xl"
               >
                 <div className="grid min-h-32 place-items-center rounded-xl border border-white/8 bg-black/25 p-4">
-                  <img src={`https://cdn.vocallabs.ai${badge.src}`} alt={badge.title} className="max-h-20 w-full object-contain" />
+                  <img src={`https://cdn.vocallabs.ai${badge.src}`} alt={badge.title} loading="lazy" decoding="async" className="max-h-20 w-full object-contain" />
                 </div>
               </motion.article>
             ))}
           </div>
 
           <div className="mt-10 rounded-3xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur-2xl">
-            <div className="text-lg font-semibold text-white/90">Enterprise & Security</div>
-            <p className="mt-2 max-w-2xl text-sm leading-relaxed text-white/60">
+            <div className="text-lg font-semibold tracking-tight text-white/92 font-[var(--font-display)]">Enterprise & Security</div>
+            <p className="mt-2 max-w-2xl text-sm leading-[1.75] text-white/66">
               Compliance-ready controls, trusted infrastructure, and the security posture teams expect when voice systems move into production.
             </p>
             <div className="mt-4 flex items-center gap-2 text-xs text-white/50">

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { Phone } from "lucide-react";
 import Link from "next/link";
 import { Container } from "@/components/landing/Container";
@@ -37,12 +37,13 @@ function LightStreaks() {
 }
 
 function DotWaveform() {
-  const cols = 132;
-  const rows = 10;
+  const reduceMotion = useReducedMotion();
+  const cols = 92;
+  const rows = 8;
 
   return (
     <div className="relative w-[100vw] left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] pt-4 sm:pt-6">
-      <div className="mx-auto flex min-h-[280px] w-full items-end justify-center gap-[4px] opacity-90 [mask-image:linear-gradient(90deg,transparent,black_4%,black_96%,transparent)]">
+      <div className="mx-auto flex min-h-[220px] w-full items-end justify-center gap-[4px] opacity-85 [mask-image:linear-gradient(90deg,transparent,black_4%,black_96%,transparent)] sm:min-h-[240px]">
         {Array.from({ length: cols }).map((_, i) => (
           <div key={i} className="flex flex-col-reverse gap-[4px]">
             {Array.from({ length: rows }).map((__, r) => {
@@ -52,13 +53,21 @@ function DotWaveform() {
                 <motion.span
                   key={r}
                   className={cn("h-1.5 w-1.5 rounded-full", on ? "bg-white/26" : "bg-white/[0.07]")}
-                  animate={{ opacity: on ? [0.32, 0.9, 0.45] : [0.08, 0.28, 0.08] }}
-                  transition={{
-                    duration: 1.95 + (i % 9) * 0.06,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: i * 0.015,
-                  }}
+                  animate={
+                    reduceMotion
+                      ? undefined
+                      : { opacity: on ? [0.32, 0.82, 0.42] : [0.08, 0.22, 0.08] }
+                  }
+                  transition={
+                    reduceMotion
+                      ? undefined
+                      : {
+                          duration: 2.2 + (i % 8) * 0.05,
+                          repeat: Infinity,
+                          ease: "easeInOut",
+                          delay: i * 0.01,
+                        }
+                  }
                 />
               );
             })}
@@ -92,7 +101,7 @@ export function Hero() {
           <motion.h1
             variants={reveal}
             className={cn(
-              "max-w-5xl text-balance text-[2.95rem] font-semibold tracking-tight text-white sm:text-6xl lg:text-[4.9rem] lg:leading-[0.98]",
+              "max-w-5xl text-balance text-[2.95rem] font-semibold tracking-[-0.02em] text-white sm:text-6xl lg:text-[4.9rem] lg:leading-[0.96]",
               "font-[var(--font-display)]"
             )}
           >
@@ -100,7 +109,7 @@ export function Hero() {
           </motion.h1>
           <motion.p
             variants={reveal}
-            className="mt-5 max-w-2xl text-pretty text-[1.05rem] leading-relaxed text-white/74 sm:text-[1.15rem]"
+            className="mt-5 max-w-2xl text-pretty text-[1.04rem] leading-[1.8] tracking-[0.01em] text-white/78 sm:text-[1.14rem]"
           >
             Voice AI infrastructure for developers. Telephony + AI model hosting that
             scales from zero to millions of concurrent calls.
