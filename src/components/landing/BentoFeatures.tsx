@@ -29,10 +29,6 @@ export function BentoFeatures() {
               built to scale.
             </span>
           </motion.h2>
-          <motion.p variants={reveal} className="mt-4 max-w-2xl text-[1.02rem] leading-[1.8] tracking-[0.01em] text-white/72">
-            Any protocol, one API, millions of concurrent calls, and low-latency model hosting—organized as a crisp bento grid.
-          </motion.p>
-
           <motion.div variants={reveal} className="mt-8">
             <div className="mx-auto w-full max-w-5xl rounded-[2rem] border border-violet-300/35 bg-gradient-to-b from-[#261764] via-[#201057] to-[#140b3d] p-1 shadow-[0_20px_60px_-30px_rgba(124,58,237,0.65)]">
               <div className="rounded-[1.7rem] border border-white/20 bg-[#0a0a12] p-2 sm:p-3">
