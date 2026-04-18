@@ -18,9 +18,9 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Voxa Studio — AI Voice Cloning & Text-to-Speech",
+  title: "VocalLabs",
   description:
-    "Premium dark-glass SaaS landing experience: clone voices, generate expressive speech, and ship multilingual audio with buttery motion and real-time previews.",
+    "Deploy and scale Voice AI with a dark, neon landing page experience.",
 };
 
 export default function RootLayout({

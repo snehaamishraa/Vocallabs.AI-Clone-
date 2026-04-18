@@ -32,7 +32,7 @@ export function HowItWorks() {
   const pathDash = useTransform(scrollYProgress, [0, 1], reduce ? [1, 1] : [0.15, 1]);
 
   return (
-    <section id="how" className="relative scroll-mt-24">
+    <section id="company" className="relative scroll-mt-24">
       <Container className="py-16 sm:py-20">
         <motion.div
           ref={ref}

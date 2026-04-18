@@ -1,55 +1,24 @@
 "use client";
 
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
-import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { ShieldCheck } from "lucide-react";
 import { Container } from "@/components/landing/Container";
-import { easeOutExpo, reveal, staggerContainer } from "@/lib/motion";
+import { reveal, staggerContainer } from "@/lib/motion";
 import { cn } from "@/lib/cn";
 
-const items = [
-  {
-    quote:
-      "We replaced a week of pickup sessions with a voice profile our producers actually trust. The motion polish in the product matches the audio quality—rare.",
-    name: "Maya Chen",
-    title: "Head of Content, Lumen Labs",
-  },
-  {
-    quote:
-      "Latency feels invisible. Our interactive demo went from ‘cool prototype’ to ‘production-ready’ once streaming stayed stable under real network conditions.",
-    name: "Jordan Patel",
-    title: "Product Lead, Arcade",
-  },
-  {
-    quote:
-      "The carousel UI is silly-good. Glass cards, crisp type, and animations that don’t fight the content—exactly what we wanted for an AI audio brand.",
-    name: "Elena Ruiz",
-    title: "Creative Director, Helio",
-  },
+const badges = [
+  { title: "Security badge 1", src: "/landing_page/da0c8abe-8dde-42d3-a592-954ab51f9829.png" },
+  { title: "Security badge 2", src: "/landing_page/04065876-42fd-46a5-9c23-1fb7653b9bb0.png" },
+  { title: "Security badge 3", src: "/landing_page/44fd1312-c8f0-423a-a95c-da2063c858cc.png" },
+  { title: "Security badge 4", src: "/landing_page/cbed390f-b274-44be-8ff1-89b519c10c71.png" },
+  { title: "Security badge 5", src: "/landing_page/e8aba454-1fa4-4401-8d73-03fc46d27a2f.png" },
+  { title: "Security badge 6", src: "/landing_page/13a80d47-7833-419f-b88e-0ae83ebe04c2.png" },
+  { title: "Security badge 7", src: "/landing_page/0ccd4bdb-d950-401d-acb4-0cd0867116c4.png" },
 ];
 
 export function Testimonials() {
-  const reduce = useReducedMotion();
-  const [idx, setIdx] = useState(0);
-
-  useEffect(() => {
-    if (reduce) return;
-    const id = window.setInterval(() => setIdx((n) => (n + 1) % items.length), 5200);
-    return () => window.clearInterval(id);
-  }, [reduce]);
-
-  const t = items[idx]!;
-
-  function prev() {
-    setIdx((n) => (n - 1 + items.length) % items.length);
-  }
-
-  function next() {
-    setIdx((n) => (n + 1) % items.length);
-  }
-
   return (
-    <section className="relative scroll-mt-24">
+    <section id="security" className="relative scroll-mt-24 border-t border-white/[0.06]">
       <Container className="py-16 sm:py-20">
         <motion.div
           variants={staggerContainer(0.12, 0.06)}
@@ -64,97 +33,36 @@ export function Testimonials() {
               "font-[var(--font-display)]"
             )}
           >
-            Proof, not promises
+            Enterprise & Security
           </motion.h2>
           <motion.p variants={reveal} className="mt-3 max-w-2xl text-white/65 leading-relaxed">
-            A sliding carousel with glass surfaces—built for the kind of trust signals investors and buyers scan for.
+            Your data security is our top priority. We maintain the highest standards of compliance and security certifications.
           </motion.p>
 
-          <motion.div variants={reveal} className="relative mt-10">
-            <div className="pointer-events-none absolute -inset-10 rounded-[32px] bg-[radial-gradient(circle_at_30%_20%,rgba(124,58,237,0.18),transparent_55%),radial-gradient(circle_at_80%_60%,rgba(34,211,238,0.12),transparent_55%)] blur-2xl" />
-
-            <div className="relative overflow-hidden rounded-3xl border border-white/12 bg-white/[0.05] backdrop-blur-2xl shadow-[0_0_0_1px_rgba(255,255,255,0.06),0_40px_120px_-70px_rgba(124,58,237,0.65)]">
-              <div className="absolute inset-0 opacity-[0.55] [background-image:radial-gradient(rgba(255,255,255,0.08)_1px,transparent_1px)] [background-size:22px_22px] [mask-image:radial-gradient(ellipse_at_center,black_55%,transparent_80%)]" />
-
-              <div className="relative p-6 sm:p-10">
-                <div className="flex items-center justify-between gap-4">
-                  <div className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/[0.04] px-3 py-1 text-xs text-white/65">
-                    <Quote className="h-3.5 w-3.5 text-white/45" />
-                    Customer stories
-                  </div>
-
-                  <div className="flex items-center gap-2">
-                    <motion.button
-                      type="button"
-                      onClick={prev}
-                      whileHover={{ y: -1 }}
-                      whileTap={{ scale: 0.98 }}
-                      className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/12 bg-white/[0.04] text-white/75"
-                      aria-label="Previous testimonial"
-                    >
-                      <ChevronLeft className="h-4 w-4" />
-                    </motion.button>
-                    <motion.button
-                      type="button"
-                      onClick={next}
-                      whileHover={{ y: -1 }}
-                      whileTap={{ scale: 0.98 }}
-                      className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/12 bg-white/[0.04] text-white/75"
-                      aria-label="Next testimonial"
-                    >
-                      <ChevronRight className="h-4 w-4" />
-                    </motion.button>
-                  </div>
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {badges.map((badge) => (
+              <motion.article
+                key={badge.title}
+                variants={reveal}
+                className="rounded-2xl border border-white/10 bg-white/[0.05] p-4 backdrop-blur-2xl"
+              >
+                <div className="grid min-h-32 place-items-center rounded-xl border border-white/8 bg-black/25 p-4">
+                  <img src={`https://cdn.vocallabs.ai${badge.src}`} alt={badge.title} className="max-h-20 w-full object-contain" />
                 </div>
+              </motion.article>
+            ))}
+          </div>
 
-                <div className="relative mt-8 min-h-[190px] sm:min-h-[170px]">
-                  <AnimatePresence mode="wait" initial={false}>
-                    <motion.div
-                      key={t.name}
-                      initial={{ opacity: 0, y: 14, filter: "blur(8px)" }}
-                      animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                      exit={{ opacity: 0, y: -12, filter: "blur(6px)" }}
-                      transition={{ duration: 0.65, ease: easeOutExpo }}
-                      drag={reduce ? false : "x"}
-                      dragElastic={0.18}
-                      dragConstraints={{ left: 0, right: 0 }}
-                      onDragEnd={(_, info) => {
-                        if (info.offset.x > 70) prev();
-                        if (info.offset.x < -70) next();
-                      }}
-                      className="cursor-grab active:cursor-grabbing"
-                    >
-                      <div className="text-xl sm:text-2xl font-medium tracking-tight text-white/85 leading-snug">
-                        “{t.quote}”
-                      </div>
-                      <div className="mt-8 flex items-center gap-3">
-                        <div className="h-11 w-11 rounded-2xl border border-white/12 bg-gradient-to-br from-violet-400/35 via-blue-400/25 to-cyan-300/20 shadow-[0_0_26px_-14px_rgba(124,58,237,0.95)]" />
-                        <div>
-                          <div className="text-sm font-semibold text-white/85">{t.name}</div>
-                          <div className="text-xs text-white/50">{t.title}</div>
-                        </div>
-                      </div>
-                    </motion.div>
-                  </AnimatePresence>
-                </div>
-
-                <div className="mt-8 flex items-center justify-center gap-2">
-                  {items.map((_, i) => (
-                    <button
-                      key={i}
-                      type="button"
-                      onClick={() => setIdx(i)}
-                      className={cn(
-                        "h-2 rounded-full transition-all",
-                        i === idx ? "w-8 bg-gradient-to-r from-violet-400 to-cyan-300" : "w-2 bg-white/20 hover:bg-white/30"
-                      )}
-                      aria-label={`Go to testimonial ${i + 1}`}
-                    />
-                  ))}
-                </div>
-              </div>
+          <div className="mt-10 rounded-3xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur-2xl">
+            <div className="text-lg font-semibold text-white/90">Enterprise & Security</div>
+            <p className="mt-2 max-w-2xl text-sm leading-relaxed text-white/60">
+              Compliance-ready controls, trusted infrastructure, and the security posture teams expect when voice systems move into production.
+            </p>
+            <div className="mt-4 flex items-center gap-2 text-xs text-white/50">
+              <ShieldCheck className="h-4 w-4 text-cyan-300" />
+              Compliance and security certifications visible in the live site.
             </div>
-          </motion.div>
+          </div>
         </motion.div>
       </Container>
     </section>

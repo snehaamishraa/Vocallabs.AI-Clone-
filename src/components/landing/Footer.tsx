@@ -13,84 +13,143 @@ function IconX(props: SVGProps<SVGSVGElement>) {
   );
 }
 
-function IconGitHub(props: SVGProps<SVGSVGElement>) {
+function IconLinkedIn(props: SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden {...props}>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.483 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12c0-5.523-4.477-10-10-10z"
-      />
+      <path d="M4.983 3.5A1.48 1.48 0 103.5 4.983a1.48 1.48 0 001.483-1.483zM3.75 8.25h2.466V20.25H3.75zM9.034 8.25h2.37v1.644h.034c.33-.625 1.137-1.284 2.344-1.284 2.506 0 2.968 1.652 2.968 3.8v7.84H14.28v-6.95c0-1.66-.03-3.8-2.318-3.8-2.319 0-2.675 1.81-2.675 3.68v7.07H6.821V8.25h2.213z" />
     </svg>
   );
 }
 
-function IconLinkedIn(props: SVGProps<SVGSVGElement>) {
+function IconFacebook(props: SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden {...props}>
-      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+      <path d="M13.5 22.5v-8.25h2.625l.375-3h-3v-1.875c0-.867.234-1.5 1.5-1.5h1.594V5.25c-.758-.082-1.79-.168-3.046-.168-2.546 0-4.296 1.555-4.296 4.414v1.754H6.75v3h2.5v8.25h4.25z" />
+    </svg>
+  );
+}
+
+function IconInstagram(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden {...props}>
+      <path d="M12 7.2a4.8 4.8 0 100 9.6 4.8 4.8 0 000-9.6zm0 7.8a3 3 0 110-6 3 3 0 010 6zm5.1-8.1a1.2 1.2 0 11-2.4 0 1.2 1.2 0 012.4 0zM4.8 4.8A4.8 4.8 0 019.6 0h4.8A4.8 4.8 0 0119.2 4.8v4.8A4.8 4.8 0 0114.4 14.4H9.6A4.8 4.8 0 014.8 9.6V4.8zm1.8 0v4.8a3 3 0 003 3h4.8a3 3 0 003-3V4.8a3 3 0 00-3-3H9.6a3 3 0 00-3 3z" />
+    </svg>
+  );
+}
+
+function IconYouTube(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden {...props}>
+      <path d="M23.5 6.2a3.01 3.01 0 00-2.12-2.13C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.38.47A3.01 3.01 0 00.5 6.2 31.6 31.6 0 000 12a31.6 31.6 0 00.5 5.8 3.01 3.01 0 002.12 2.13C4.5 20.4 12 20.4 12 20.4s7.5 0 9.38-.47a3.01 3.01 0 002.12-2.13A31.6 31.6 0 0024 12a31.6 31.6 0 00-.5-5.8zM9.6 15.5v-7l6 3.5-6 3.5z" />
     </svg>
   );
 }
 
 const social = [
-  { href: "#", label: "X", icon: IconX },
-  { href: "#", label: "GitHub", icon: IconGitHub },
-  { href: "#", label: "LinkedIn", icon: IconLinkedIn },
+  { href: "https://www.linkedin.com/company/vocallabsai/", label: "LinkedIn", icon: IconLinkedIn },
+  { href: "https://www.facebook.com/profile.php?id=61572573494501", label: "Facebook", icon: IconFacebook },
+  { href: "https://www.instagram.com/vocallabsai/", label: "Instagram", icon: IconInstagram },
+  { href: "https://www.x.com/vocallabsai", label: "X", icon: IconX },
+  { href: "https://www.youtube.com/@vocallabsai", label: "YouTube", icon: IconYouTube },
 ];
 
 export function Footer() {
   return (
     <footer className="border-t border-white/10">
-      <Container className="py-12">
-        <div className="flex flex-col items-start justify-between gap-10 lg:flex-row lg:items-center">
-          <div>
-            <div className="flex items-center gap-2">
-              <span className="h-9 w-9 rounded-xl bg-white/6 border border-white/12 backdrop-blur-xl shadow-[0_0_0_1px_rgba(255,255,255,0.06)] grid place-items-center">
-                <span className="h-3.5 w-3.5 rounded-md bg-gradient-to-br from-violet-400 via-blue-500 to-cyan-300 shadow-[0_0_24px_rgba(124,58,237,0.55)]" />
-              </span>
-              <span className="font-semibold tracking-tight text-white/90 font-[var(--font-display)]">
-                Voxa <span className="text-white/55 font-medium">Studio</span>
-              </span>
+      <Container className="py-14 sm:py-16">
+        <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 sm:p-10 backdrop-blur-2xl shadow-[0_0_0_1px_rgba(255,255,255,0.04),0_35px_120px_-80px_rgba(124,58,237,0.7)]">
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+            <div className="max-w-2xl">
+              <div className="text-3xl sm:text-4xl font-semibold tracking-tight text-white font-[var(--font-display)]">
+                Ready to transform your business?
+              </div>
+              <p className="mt-3 text-white/65 leading-relaxed">
+                Transforming businesses with intelligent AI voice agents.
+              </p>
             </div>
-            <p className="mt-3 max-w-md text-sm text-white/55 leading-relaxed">
-              Premium AI voice cloning and text-to-speech—built for teams who care about motion, materials, and sound.
-            </p>
+
+            <motion.a
+              whileHover={{ y: -1, scale: 1.01 }}
+              whileTap={{ scale: 0.99 }}
+              href="https://www.vocallabs.ai/contact"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-violet-500 via-violet-600 to-fuchsia-600 px-5 py-3 text-sm font-semibold text-white shadow-[0_0_0_1px_rgba(255,255,255,0.12),0_14px_40px_-12px_rgba(168,85,247,0.8)]"
+            >
+              Schedule Your Free Demo
+            </motion.a>
           </div>
 
-          <div className="flex flex-wrap items-center gap-3">
-            {social.map((s) => (
-              <motion.a
-                key={s.label}
-                href={s.href}
-                aria-label={s.label}
-                whileHover={{ y: -2, scale: 1.03 }}
-                whileTap={{ scale: 0.99 }}
-                className={cn(
-                  "inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/12",
-                  "bg-white/[0.04] text-white/70 backdrop-blur-xl",
-                  "shadow-[0_0_0_1px_rgba(255,255,255,0.05)]",
-                  "hover:text-white/90 hover:border-white/18 hover:shadow-[0_0_0_1px_rgba(124,58,237,0.35),0_18px_70px_-45px_rgba(59,130,246,0.75)]"
-                )}
-              >
-                <s.icon className="h-4 w-4" />
-              </motion.a>
-            ))}
-          </div>
-        </div>
+          <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            <div>
+              <div className="flex items-center gap-2">
+                <span className="grid h-9 w-9 place-items-center overflow-hidden rounded-xl border border-white/14 bg-white shadow-[0_0_0_1px_rgba(255,255,255,0.10),0_10px_30px_-18px_rgba(255,255,255,0.45)]">
+                  <img src="/vocallabs-logo.png" alt="VocalLabs logo" className="h-6 w-6 object-contain brightness-0" />
+                </span>
+                <span className="font-semibold tracking-tight text-white/90 font-[var(--font-display)]">VocalLabs</span>
+              </div>
+              <p className="mt-3 text-sm text-white/55 leading-relaxed">
+                Empower your business with intelligent, real-time voice agents that understand, converse, and act.
+              </p>
+            </div>
 
-        <div className="mt-10 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-8 text-xs text-white/40 sm:flex-row sm:items-center">
-          <div>© {new Date().getFullYear()} Voxa Studio. All rights reserved.</div>
-          <div className="flex flex-wrap gap-x-6 gap-y-2">
-            <a className="hover:text-white/60 transition" href="#">
-              Privacy
-            </a>
-            <a className="hover:text-white/60 transition" href="#">
-              Terms
-            </a>
-            <a className="hover:text-white/60 transition" href="#">
-              Security
-            </a>
+            <div>
+              <div className="text-sm font-semibold text-white/90">Company</div>
+              <div className="mt-3 space-y-2 text-sm text-white/55">
+                <a className="block hover:text-white/80" href="https://www.vocallabs.ai/about" target="_blank" rel="noreferrer">About Us</a>
+                <a className="block hover:text-white/80" href="https://www.vocallabs.ai/contact" target="_blank" rel="noreferrer">Contact Us</a>
+                <a className="block hover:text-white/80" href="https://www.vocallabs.ai/pricing-policy" target="_blank" rel="noreferrer">Pricing Policy</a>
+                <a className="block hover:text-white/80" href="https://vocallabs.ai/blogs" target="_blank" rel="noreferrer">Blogs</a>
+                <a className="block hover:text-white/80" href="https://app.hiringg.ai/vocallabs" target="_blank" rel="noreferrer">Careers</a>
+              </div>
+            </div>
+
+            <div>
+              <div className="text-sm font-semibold text-white/90">Contact</div>
+              <div className="mt-3 space-y-2 text-sm text-white/55">
+                <a className="block hover:text-white/80" href="https://www.vocallabs.ai/contact" target="_blank" rel="noreferrer">Schedule Demo</a>
+              </div>
+              <div className="mt-5 text-sm font-semibold text-white/90">Open Source</div>
+              <div className="mt-3 text-sm text-white/55">
+                <a className="block hover:text-white/80" href="https://www.vocallabs.ai/vocalflow" target="_blank" rel="noreferrer">VocalFlow</a>
+              </div>
+            </div>
+
+            <div>
+              <div className="text-sm font-semibold text-white/90">Legal</div>
+              <div className="mt-3 space-y-2 text-sm text-white/55">
+                <a className="block hover:text-white/80" href="https://www.vocallabs.ai/privacy-policy" target="_blank" rel="noreferrer">Privacy Policy</a>
+                <a className="block hover:text-white/80" href="https://www.vocallabs.ai/terms-and-conditions" target="_blank" rel="noreferrer">Terms & Conditions</a>
+                <a className="block hover:text-white/80" href="https://www.vocallabs.ai/refund-policy" target="_blank" rel="noreferrer">Refund Policy</a>
+                <a className="block hover:text-white/80" href="https://www.vocallabs.ai/dpa" target="_blank" rel="noreferrer">Data Protection Addendum</a>
+                <a className="block hover:text-white/80" href="https://vocallabsai.betteruptime.com/" target="_blank" rel="noreferrer">Uptime Status</a>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-10 flex flex-col gap-6 border-t border-white/10 pt-8 lg:flex-row lg:items-center lg:justify-between">
+            <div className="flex flex-wrap items-center gap-3">
+              {social.map((item) => (
+                <motion.a
+                  key={item.label}
+                  href={item.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={item.label}
+                  whileHover={{ y: -2, scale: 1.03 }}
+                  whileTap={{ scale: 0.99 }}
+                  className={cn(
+                    "inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/12",
+                    "bg-white/[0.04] text-white/70 backdrop-blur-xl",
+                    "shadow-[0_0_0_1px_rgba(255,255,255,0.05)]",
+                    "hover:text-white/90 hover:border-white/18"
+                  )}
+                >
+                  <item.icon className="h-4 w-4" />
+                </motion.a>
+              ))}
+            </div>
+            <div className="text-xs text-white/40">© 2025 Vocal Labs.ai. All rights reserved.</div>
           </div>
         </div>
       </Container>

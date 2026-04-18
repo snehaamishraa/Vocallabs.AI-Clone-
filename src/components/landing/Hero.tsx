@@ -1,197 +1,129 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Phone } from "lucide-react";
+import Link from "next/link";
 import { Container } from "@/components/landing/Container";
-import { Button } from "@/components/landing/Button";
-import { easeOutExpo, reveal, staggerContainer } from "@/lib/motion";
+import { NavBar } from "@/components/landing/NavBar";
 import { cn } from "@/lib/cn";
+import { reveal, staggerContainer } from "@/lib/motion";
 
-const PARTICLES = Array.from({ length: 26 }, (_, i) => {
-  const a = (i * 9973) % 1000 / 1000;
-  const b = (i * 7919) % 1000 / 1000;
-  return {
-    left: `${8 + a * 84}%`,
-    top: `${10 + b * 72}%`,
-    dur: 9 + (i % 7),
-    delay: (i % 5) * 0.35,
-    size: i % 3 === 0 ? 2 : i % 3 === 1 ? 3 : 4,
-  };
-});
-
-function HeroWave() {
+function LightStreaks() {
   return (
-    <svg
-      viewBox="0 0 1400 320"
-      className="w-[120%] max-w-none opacity-[0.55]"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-    >
-      <defs>
-        <linearGradient id="heroWave" x1="0" y1="0" x2="1400" y2="0">
-          <stop stopColor="rgba(124,58,237,0.0)" offset="0" />
-          <stop stopColor="rgba(124,58,237,0.55)" offset="0.25" />
-          <stop stopColor="rgba(59,130,246,0.65)" offset="0.55" />
-          <stop stopColor="rgba(34,211,238,0.45)" offset="0.82" />
-          <stop stopColor="rgba(34,211,238,0.0)" offset="1" />
-        </linearGradient>
-        <filter id="heroGlow">
-          <feGaussianBlur stdDeviation="7" result="blur" />
-          <feMerge>
-            <feMergeNode in="blur" />
-            <feMergeNode in="SourceGraphic" />
-          </feMerge>
-        </filter>
-      </defs>
-      <motion.path
-        d="M0 190 C 160 90, 320 250, 480 150 C 640 55, 800 260, 960 140 C 1120 35, 1280 240, 1400 120"
-        stroke="url(#heroWave)"
-        strokeWidth="3.5"
-        filter="url(#heroGlow)"
-        initial={{ pathLength: 0, opacity: 0 }}
-        animate={{ pathLength: 1, opacity: 1 }}
-        transition={{ duration: 1.45, ease: easeOutExpo, delay: 0.12 }}
+    <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
+      <motion.div
+        className="absolute -left-[18%] top-[24%] h-[10px] w-[76%] rotate-[13deg] rounded-full bg-[linear-gradient(90deg,transparent_0%,rgba(139,92,246,0.12)_12%,rgba(168,85,247,0.95)_50%,rgba(216,180,254,0.55)_66%,transparent_100%)] blur-[1px]"
+        animate={{ opacity: [0.3, 0.85, 0.35], x: [0, 18, 0] }}
+        transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
       />
-      <motion.path
-        d="M0 215 C 170 150, 330 240, 500 175 C 670 110, 820 255, 990 165 C 1160 80, 1280 235, 1400 170"
-        stroke="rgba(255,255,255,0.10)"
-        strokeWidth="2"
-        initial={{ pathLength: 0, opacity: 0 }}
-        animate={{ pathLength: 1, opacity: 1 }}
-        transition={{ duration: 1.65, ease: easeOutExpo, delay: 0.22 }}
+      <motion.div
+        className="absolute -left-[6%] top-[29%] h-[8px] w-[78%] rotate-[13deg] rounded-full bg-[linear-gradient(90deg,transparent_0%,rgba(139,92,246,0.12)_10%,rgba(168,85,247,0.7)_52%,rgba(216,180,254,0.32)_70%,transparent_100%)] blur-[1px]"
+        animate={{ opacity: [0.22, 0.68, 0.25], x: [0, 14, 0] }}
+        transition={{ duration: 13, repeat: Infinity, ease: "easeInOut", delay: 0.15 }}
       />
-    </svg>
+      <motion.div
+        className="absolute right-[-2%] top-[-4%] h-[78%] w-[28%] rotate-[4deg] rounded-full bg-[linear-gradient(180deg,rgba(168,85,247,0.58)_0%,rgba(139,92,246,0.2)_28%,transparent_82%)] blur-[22px]"
+        animate={{ opacity: [0.2, 0.52, 0.24], y: [0, 12, 0] }}
+        transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div
+        className="absolute right-[5%] bottom-[3%] h-[58%] w-[30%] rotate-[-28deg] rounded-full bg-[linear-gradient(180deg,rgba(168,85,247,0.42)_0%,rgba(139,92,246,0.16)_30%,transparent_82%)] blur-[24px]"
+        animate={{ opacity: [0.16, 0.42, 0.2], x: [0, -12, 0] }}
+        transition={{ duration: 17, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
+      />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_46%,rgba(76,29,149,0.06),transparent_56%)]" />
+    </div>
+  );
+}
+
+function DotWaveform() {
+  const cols = 132;
+  const rows = 10;
+
+  return (
+    <div className="relative w-[100vw] left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] pt-4 sm:pt-6">
+      <div className="mx-auto flex min-h-[280px] w-full items-end justify-center gap-[4px] opacity-90 [mask-image:linear-gradient(90deg,transparent,black_4%,black_96%,transparent)]">
+        {Array.from({ length: cols }).map((_, i) => (
+          <div key={i} className="flex flex-col-reverse gap-[4px]">
+            {Array.from({ length: rows }).map((__, r) => {
+              const on = (i * 13 + r * 7) % 15 > 6;
+
+              return (
+                <motion.span
+                  key={r}
+                  className={cn("h-1.5 w-1.5 rounded-full", on ? "bg-white/26" : "bg-white/[0.07]")}
+                  animate={{ opacity: on ? [0.32, 0.9, 0.45] : [0.08, 0.28, 0.08] }}
+                  transition={{
+                    duration: 1.95 + (i % 9) * 0.06,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: i * 0.015,
+                  }}
+                />
+              );
+            })}
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }
 
 export function Hero() {
   return (
-    <section className="relative min-h-[92vh] overflow-hidden">
-      <div className="absolute inset-0">
-        <div className="aurora" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_-10%,rgba(124,58,237,0.22),transparent_55%)]" />
-        <div className="absolute inset-0 opacity-[0.72] [background-image:radial-gradient(rgba(255,255,255,0.08)_1px,transparent_1px)] [background-size:26px_26px] [mask-image:radial-gradient(ellipse_at_center,black_52%,transparent_74%)]" />
+    <section className="relative min-h-[100svh] overflow-hidden pt-0">
+      <div className="absolute inset-0 bg-[#050515]">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_12%,rgba(48,33,129,0.42),transparent_52%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_82%,rgba(76,29,149,0.16),transparent_58%)]" />
+        <LightStreaks />
+        <div className="absolute inset-0 opacity-[0.5] [background-image:radial-gradient(rgba(255,255,255,0.08)_1px,transparent_1px)] [background-size:28px_28px] [mask-image:radial-gradient(ellipse_at_center,black_42%,transparent_80%)]" />
+        <div className="absolute inset-x-0 bottom-0 h-[42%] bg-[linear-gradient(180deg,transparent_0%,rgba(5,5,21,0.56)_35%,rgba(5,5,21,0.95)_100%)]" />
       </div>
 
-      <div className="pointer-events-none absolute inset-0">
-        {PARTICLES.map((p, idx) => (
-          <motion.span
-            key={idx}
-            className="absolute rounded-full bg-white/35 blur-[0.5px] shadow-[0_0_22px_rgba(124,58,237,0.35)]"
-            style={{ left: p.left, top: p.top, width: p.size, height: p.size }}
-            animate={{ y: [0, -14, 0], opacity: [0.15, 0.55, 0.15] }}
-            transition={{ duration: p.dur, repeat: Infinity, ease: "easeInOut", delay: p.delay }}
-          />
-        ))}
-      </div>
+      <NavBar />
 
-      <div className="pointer-events-none absolute -bottom-24 left-1/2 w-[1400px] -translate-x-1/2">
+      <Container className="relative flex min-h-[calc(100svh-92px)] flex-col justify-center pb-0 pt-6 sm:pt-8 lg:pt-10">
         <motion.div
-          animate={{ x: [0, -40, 0], y: [0, 10, 0] }}
-          transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <HeroWave />
-        </motion.div>
-      </div>
-
-      <Container className="relative pt-7 sm:pt-9">
-        <header className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <span className="h-9 w-9 rounded-xl bg-white/6 border border-white/12 backdrop-blur-xl shadow-[0_0_0_1px_rgba(255,255,255,0.06)] grid place-items-center">
-              <span className="h-3.5 w-3.5 rounded-md bg-gradient-to-br from-violet-400 via-blue-500 to-cyan-300 shadow-[0_0_24px_rgba(124,58,237,0.55)]" />
-            </span>
-            <span className="font-semibold tracking-tight text-white/90 font-[var(--font-display)]">
-              Voxa
-              <span className="text-white/55 font-medium"> Studio</span>
-            </span>
-          </div>
-          <nav className="hidden md:flex items-center gap-7 text-sm text-white/70">
-            <a className="hover:text-white/90 transition" href="#features">
-              Features
-            </a>
-            <a className="hover:text-white/90 transition" href="#voice-demo">
-              Demo
-            </a>
-            <a className="hover:text-white/90 transition" href="#how">
-              Workflow
-            </a>
-            <a className="hover:text-white/90 transition" href="#pricing">
-              Pricing
-            </a>
-            <Button href="#voice-demo" variant="secondary" className="h-10 px-4">
-              Try audio
-            </Button>
-          </nav>
-        </header>
-
-        <motion.div
-          variants={staggerContainer(0.12, 0.05)}
+          variants={staggerContainer(0.1, 0.05)}
           initial="hidden"
           animate="show"
-          className="mx-auto flex max-w-5xl flex-col items-center pt-16 text-center sm:pt-20 lg:pt-24"
+          className="mx-auto flex max-w-5xl -translate-y-2 flex-col items-center text-center sm:-translate-y-4 lg:-translate-y-6"
         >
-          <motion.div
-            variants={reveal}
-            className="inline-flex items-center gap-2 rounded-full bg-white/6 border border-white/12 px-3 py-1 text-xs text-white/70 backdrop-blur-xl"
-          >
-            <span className="h-1.5 w-1.5 rounded-full bg-cyan-300 shadow-[0_0_18px_rgba(34,211,238,0.8)]" />
-            Voice cloning • Neural TTS • Real-time streaming
-          </motion.div>
-
           <motion.h1
             variants={reveal}
             className={cn(
-              "mt-6 text-balance text-4xl sm:text-6xl lg:text-7xl font-semibold tracking-tight text-white",
+              "max-w-5xl text-balance text-[2.95rem] font-semibold tracking-tight text-white sm:text-6xl lg:text-[4.9rem] lg:leading-[0.98]",
               "font-[var(--font-display)]"
             )}
           >
-            AI Voice Cloning
-            <span className="block sm:inline sm:pl-3">
-              <span className="bg-gradient-to-r from-violet-300 via-blue-200 to-cyan-200 bg-clip-text text-transparent">
-                & Text-to-Speech
-              </span>
-            </span>
+            Deploy and Scale <span className="bg-gradient-to-r from-violet-300 via-fuchsia-300 to-purple-300 bg-clip-text text-transparent">Voice AI</span>
           </motion.h1>
-
           <motion.p
             variants={reveal}
-            className="mt-6 max-w-2xl text-pretty text-lg text-white/65 leading-relaxed"
+            className="mt-5 max-w-2xl text-pretty text-[1.05rem] leading-relaxed text-white/74 sm:text-[1.15rem]"
           >
-            Create lifelike voices, ship multilingual audio in minutes, and keep every output on-brand—
-            with glass-smooth UX and motion that feels expensive.
+            Voice AI infrastructure for developers. Telephony + AI model hosting that
+            scales from zero to millions of concurrent calls.
           </motion.p>
-
-          <motion.div variants={reveal} className="mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
-            <Button href="#voice-demo" variant="primary" className="h-12 px-7 text-[15px]">
-              Try Now
-            </Button>
-            <Button href="#voice-demo" variant="secondary" className="h-12 px-7 text-[15px]">
-              Watch Demo
-            </Button>
-          </motion.div>
-
-          <motion.div
-            variants={reveal}
-            className="mt-12 grid w-full max-w-4xl grid-cols-1 gap-3 sm:grid-cols-3"
-          >
-            {[
-              ["Latency", "~300ms feel", "Streaming-first inference"],
-              ["Quality", "Studio polish", "Noise-aware rendering"],
-              ["Control", "Style + safety", "Guardrails built-in"],
-            ].map(([a, b, c]) => (
-              <motion.div
-                key={a}
-                whileHover={{ y: -3 }}
-                transition={{ type: "spring", stiffness: 320, damping: 22 }}
-                className="rounded-2xl border border-white/10 bg-white/[0.04] p-4 text-left backdrop-blur-2xl shadow-[0_0_0_1px_rgba(255,255,255,0.05)]"
-              >
-                <div className="text-xs text-white/50">{a}</div>
-                <div className="mt-1 text-base font-semibold text-white/85">{b}</div>
-                <div className="mt-1 text-xs text-white/55">{c}</div>
-              </motion.div>
-            ))}
+          <motion.div variants={reveal} className="mt-8">
+            <Link
+              href="#voice-demo"
+              className={cn(
+                "inline-flex items-center gap-3 rounded-full border border-violet-400/15 bg-[#1a1230]/90 px-7 py-3.5",
+                "text-sm font-semibold text-white/95 backdrop-blur-xl",
+                "shadow-[0_0_0_1px_rgba(255,255,255,0.05),0_0_32px_rgba(124,58,237,0.42),0_18px_60px_-40px_rgba(124,58,237,0.78)]",
+                "transition hover:border-violet-300/30 hover:bg-[#20163b]/95"
+              )}
+            >
+              <span>Talk to an Expert</span>
+              <Phone className="h-4 w-4 text-white/90" />
+            </Link>
           </motion.div>
         </motion.div>
+
+        <div className="absolute inset-x-0 bottom-0 pb-0">
+          <DotWaveform />
+        </div>
       </Container>
     </section>
   );
