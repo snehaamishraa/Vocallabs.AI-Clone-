@@ -149,6 +149,11 @@ export function Footer() {
             </div>
             <div className="text-xs text-white/40">© 2025 Vocal Labs.ai. All rights reserved.</div>
           </div>
+
+          <div className="mt-4 text-xs leading-relaxed text-white/45">
+            This website is a non-commercial educational/demo project. All rights to original brand names,
+            logos, media, and related content belong to their respective owners.
+          </div>
         </div>
       </Container>
     </footer>
