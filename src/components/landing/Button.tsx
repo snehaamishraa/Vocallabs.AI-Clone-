@@ -22,7 +22,7 @@ export function Button({ href, children, variant = "primary", className }: Props
     "text-white/90 bg-white/5 border border-white/12 backdrop-blur-xl hover:bg-white/8 hover:border-white/18";
 
   return (
-    <motion.div whileHover={{ y: -1 }} whileTap={{ scale: 0.99 }}>
+    <motion.div whileHover={{ y: -1.5 }} whileTap={{ scale: 0.985 }} transition={{ type: "spring", stiffness: 420, damping: 26 }}>
       <Link
         href={href}
         className={cn(base, variant === "primary" ? primary : secondary, className)}
@@ -31,6 +31,7 @@ export function Button({ href, children, variant = "primary", className }: Props
         {variant === "primary" ? (
           <span className="pointer-events-none absolute inset-0 rounded-full opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.35),transparent_55%)]" />
         ) : null}
+        <span className="pointer-events-none absolute -inset-1 rounded-full opacity-0 blur-lg transition-opacity duration-300 group-hover:opacity-100 bg-[radial-gradient(circle_at_50%_50%,rgba(124,58,237,0.35),transparent_62%)]" />
       </Link>
     </motion.div>
   );
